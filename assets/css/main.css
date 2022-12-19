@@ -148,6 +148,10 @@ input, select, textarea {
 		border-radius: 10px;
 	}
 
+	#github{
+		max-width: 15em;
+	}
+
 
 	progress{
 		height: 13px;
