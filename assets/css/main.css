@@ -1862,6 +1862,71 @@ input, select, textarea {
 
 		}
 
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.portfolio {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		
+		h1 {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		
+		.projects {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		
+		.project {
+			flex-basis: calc(33.33% - 20px);
+			margin-bottom: 40px;
+		}
+		
+		.project img {
+			width: 50%;
+			max-width: 300px; /* Set a maximum width for the images */
+			height: auto; /* Preserve aspect ratio */
+			box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1); /* Add a subtle shadow */
+			border-radius: 5px;
+			display: block;
+			margin: 0 auto; /* Center the images */
+		}
+		
+		.project-info {
+			text-align: center;
+			margin-top: 10px;
+		}
+		.project-info-ecom {
+			text-align: center;
+			margin-top: 34px;
+		}
+		
+		h2 {
+			margin-bottom: 10px;
+		}
+		
+		button {
+			background-color: #007bff;
+			color: #fff;
+			padding: 8px 15px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		button:hover {
+			background-color: #0056b3;
+		}
+		
+
 		#imgkt{
 			width: 1em;
 			height: 1em;
