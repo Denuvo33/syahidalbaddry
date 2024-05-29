@@ -14,6 +14,8 @@
 	
 }
 
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1878,6 +1880,7 @@ input, select, textarea {
 			text-align: center;
 			margin-bottom: 30px;
 		}
+
 		
 		.projects {
 			display: flex;
@@ -1889,6 +1892,8 @@ input, select, textarea {
 			flex-basis: calc(33.33% - 20px);
 			margin-bottom: 40px;
 		}
+		
+		
 		
 		.project img {
 			width: 50%;
@@ -3191,7 +3196,6 @@ input, select, textarea {
 			-ms-justify-content: center;
 			justify-content: center;
 			width: 50em;
-			-ms-flex: 1;
 		}
 
 			.spotlights > section > .content > .inner {
