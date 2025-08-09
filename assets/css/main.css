@@ -16,6 +16,8 @@
 
 
 
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -40,6 +42,9 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	font-family: 'Inter', sans-serif;
+    background-color: #0f0f0f;
+    color: #f5f5f5;
 }
 
 ol, ul {
@@ -62,6 +67,9 @@ table {
 
 body {
 	-webkit-text-size-adjust: none;
+	 font-family: 'Inter', sans-serif;
+    background-color: #0f0f0f;
+    color: #f5f5f5;
 }
 
 mark {
@@ -73,6 +81,7 @@ input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
+
 
 input, select, textarea {
 	-moz-appearance: none;
@@ -95,6 +104,9 @@ input, select, textarea {
 
 		html, body {
 			min-width: 320px;
+			 font-family: 'Inter', sans-serif;
+    background-color: #0f0f0f;
+    color: #f5f5f5;
 		}
 		
 		#fontskill{
@@ -132,6 +144,9 @@ input, select, textarea {
 
 	body {
 		background: #d1d1d1;
+		 font-family: 'Inter', sans-serif;
+    background-color: #0f0f0f;
+    color: #f5f5f5;
 	}
 	
 
@@ -184,7 +199,6 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.55);
-		font-family: Arial, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
 		line-height: 1.75;
@@ -258,6 +272,142 @@ input, select, textarea {
 	h1 {
 		font-size: 2.75em;
 	}
+
+	/* ==== INTRO ANIMATED GRADIENT ==== */
+/* #intro {
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1f1c2c);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+} */
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==== SKILL ICON LINGKARAN ==== */
+.skill-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px rgba(255, 122, 24, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+	overflow: hidden;
+}
+
+.skill-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain; /* biar muat tanpa distorsi */
+}
+
+
+
+.skill-icon:hover {
+    box-shadow: 0 0 20px rgba(255, 122, 24, 0.6);
+    transform: translateY(-3px);
+}
+
+/* ==== SOCIAL MEDIA ICON NEON ==== */
+.icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.icons a:hover {
+    background: linear-gradient(45deg, #ff7a18, #af002d, #319197);
+    box-shadow: 0 0 12px rgba(255, 122, 24, 0.8);
+}
+
+.service {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.service-list {
+  list-style: none;
+  
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 20px;
+  width: fit-content;
+  height: fit-content;
+  align-items: stretch;
+}
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #181818;
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1 1 calc(50% - 20px); 
+  min-width: 280px;
+  transition: background 0.3s ease;
+}
+
+.service-item:hover {
+  background: #313131;
+}
+
+.service-icon-box {
+  flex-shrink: 0;
+  color: #4f46e5; /* warna ikon */
+}
+
+.service-content-box {
+  flex: 1;
+}
+
+.service-item-title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.service-item-text {
+  color: #666;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .service-item {
+    flex: 1 1 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .service-icon-box {
+    margin-bottom: 10px;
+  }
+}
+
+
 
 		h1.major {
 			margin: 0 0 1.3em 0;
@@ -1884,22 +2034,46 @@ input, select, textarea {
 		}
 		
 		.project-card {
-			background-color: #1e1e1e;
-			border: 1px solid #2c2c2c;
-			border-radius: 12px;
-			padding: 16px;
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-			display: flex;
-			flex-direction: column;
-			transition: transform 0.3s ease;
-		}
-		
-		.project-card:hover {
-			transform: translateY(-5px);
-		}
+    background: rgba(30, 30, 30, 0.6); /* transparan sedikit */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border 0.3s ease;
+    backdrop-filter: blur(10px); /* efek blur glassmorphism */
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 1px; /* ketebalan border */
+    background: linear-gradient(90deg, #ff7a18, #af002d, #319197);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
 		
 		.card-title {
-			background-color: #2a2a2a;
+			background-color: #1d1d1d;
 			padding: 10px;
 			border-radius: 8px;
 			margin-bottom: 12px;
@@ -1917,7 +2091,7 @@ input, select, textarea {
 		
 		.view-btn {
 			margin-top: auto;
-			background-color: #282c34;
+			background-color: #3a4f7965;
 			color: #ffffff;
 			padding: 10px 0;
 			text-align: center;
@@ -3236,6 +3410,22 @@ input, select, textarea {
 			justify-content: center;
 			width: 50em;
 		}
+
+		.content .inner {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content .inner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(255, 122, 24, 0.2);
+}
+
 
 			.spotlights > section > .content > .inner {
 				-moz-transform: translateX(0) translateY(0);
