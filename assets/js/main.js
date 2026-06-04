@@ -119,8 +119,8 @@ function initializeScrollEffects() {
 
     // Sophisticated scroll reveal animations
     const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -80px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -20px 0px'
     };
 
     const fadeObserver = new IntersectionObserver((entries) => {
@@ -151,7 +151,7 @@ function initializeScrollEffects() {
                 cardObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.02 });
 
     document.querySelectorAll('.category-grid, .services-grid, .skills-grid, .contact-grid').forEach(el => {
         // Set initial state
@@ -214,7 +214,7 @@ function animateSectionTitles() {
                 titleObserver.unobserve(title);
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.2 });
 
     document.querySelectorAll('.section-title').forEach(title => {
         titleObserver.observe(title);
@@ -239,7 +239,7 @@ function initializeStaggeredAnimations() {
                 tagObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.project-tech').forEach(container => {
         tagObserver.observe(container);

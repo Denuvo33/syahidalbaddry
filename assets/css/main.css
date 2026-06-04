@@ -854,6 +854,23 @@ body {
   transform: translateY(0);
 }
 
+/* Fallback: ensure content is visible on mobile even if IntersectionObserver fails */
+@media (max-width: 768px) {
+  .fade-in {
+    animation: fallbackReveal 0s 2s forwards;
+  }
+  .fade-in.visible {
+    animation: none;
+  }
+}
+
+@keyframes fallbackReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ==========================================================================
    Responsive Design
    ========================================================================== */
